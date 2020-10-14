@@ -51,9 +51,13 @@ fun main(args: Array<String>) {
 
                         val second = stack.first()
                         stack.removeAt(0)
-                            if(difference == 1 || difference == 2) {
+
+                            if(difference >= 1) {
                                 var str = "(" + first + sign + second + ")"
                                 stack.add(0, str)
+                            } else {
+                                println("Number of operators and numbers doesnt meet the requirements please try again")
+                                return
                             }
                         /* when(sign){
                             "+" -> stack.add(add(first, second))
